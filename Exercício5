@@ -1,0 +1,27 @@
+/*
+ * Todos os direitos reservados
+ * ----------
+ * @author Severa P. Moura e Silva
+ * @date 07/03/2023
+ * @description Exercício 5 - Classe feita utilizando linguagem apex responsável por inverter os caracteres de uma string, outra solução seria utilizar método reverse
+ * @change
+ */
+public class ReverseStringBO
+{
+    public static String reverseString(String originalString)
+    {
+        String reverseString = '';
+       
+        if(originalString != null && String.isNotEmpty(originalString))
+        {
+            for(Integer i = originalString.length()-1; i >= 0; i--)
+            {
+                reverseString += originalString.substring(i, i+1);
+            }            
+        }
+       
+        system.debug('reverseString: ' + reverseString);
+       
+        return reverseString;
+    }
+}
